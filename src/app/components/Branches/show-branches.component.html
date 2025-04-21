@@ -1,0 +1,5 @@
+@for (branch of branches; track $index) {
+    <li class="list-group-item">{{branch}}</li>
+    }@empty {
+    <div class="alert alert-danger text-center">Hasn't opened this quarter</div>
+    }

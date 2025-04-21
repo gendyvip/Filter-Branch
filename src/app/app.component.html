@@ -1,0 +1,18 @@
+<div class="container d-flex flex-column justify-content-center align-items-center">
+    <div class="lead fs-3 text-center fw-bold my-4">ITI Branches</div>
+    <div class="row d-flex flex-row justify-content-center w-50">
+        <div class="col-4">
+            <app-select-track (selectedTrack)="getTrack($event)" />
+        </div>
+        <div class="col-8">
+            @if (!flag) {
+            <div class="alert alert-secondary text-center">Select Track to show its available branches</div>
+            }
+            @else{
+            <ol class=" list-group list-group-numbered">
+                <app-show-branches [branches]="filteredBranches" />
+            </ol>
+            }
+        </div>
+    </div>
+</div>
